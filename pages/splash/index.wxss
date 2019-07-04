@@ -1,0 +1,27 @@
+.container{
+  height: 100%;
+  overflow: hidden;
+}
+.splash{
+  height: 100%;
+}
+switch-item{
+  flex: 1;
+}
+image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+/*设置按钮的样式  */
+.start{
+  position: absolute;
+  bottom: 200px;
+  left: 30%;
+  width: 150px;
+  background-color: rgba(50, 70, 90, 0.4);
+  color: white;
+  border: 5px solid #35495e;
+  font-size: 20px;
+}

@@ -1,0 +1,17 @@
+
+<!--使用template模板，需要用 import引入对应的模板文件  -->
+<import src="../common/common"/>
+<view class="container">
+  <view class="header">
+    <!-- placeholder 搜索框中的占位符 -->
+    <!--placeholder-class 给占位符添加类名  -->
+    <!--auto-focus 页面加载时 光标自动聚焦在该文本框 -->
+    <!--bindchange 绑定事件改变，失去焦点时调用 -->
+    <input class="search" placeholder="{{subtitle}}" 
+    placeholder-class="search-placeholder" auto-focus bindchange="handleSearch"  />
+  </view>
+  <!--template：模板，也就是wxml页面，但是不需要再app.json中配置路径 -->
+  <!--使用 is 属性，声明需要的使用的模板，然后将模板所需要的 data 传入。  -->
+  <template is="movie-list" data="{{ movies, loading, hasMore }}"/>
+</view>
+

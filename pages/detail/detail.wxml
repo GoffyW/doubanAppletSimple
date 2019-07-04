@@ -1,0 +1,19 @@
+<view class="container" >
+  <!--设置加载动画  -->
+  <loading hidden="{{ hidden }}">加载中...</loading> 
+  <!--在保持纵横比（aspect）的前提下，使图片充满容器(fill)。  -->
+  <image class="background" src="{{ movieDetail.imageUrl }}" mode="aspectFill"/>
+  <scroll-view class="container" scroll-y="true" wx:if="{{ movieDetail.movName }}">
+    <view class="meta">
+      <image class="poster" src="{{ movieDetail.imageUrl }}" mode="aspectFit"/>
+      <text class="title">{{ movieDetail.movName }}({{ movieDetail.year }})</text>
+      <text class="info">评分：{{ movieDetail.score }}</text>
+      <text class="info">导演：{{ movieDetail.direct }}</text>
+      <text class="info">主演：{{ movieDetail.actor }} </text>
+    </view>
+    <view class="summary">
+      <text class="label">摘要：</text>
+      <text class="content">{{ movieDetail.summary }}</text>
+    </view>
+  </scroll-view>
+</view>

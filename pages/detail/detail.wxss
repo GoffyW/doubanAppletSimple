@@ -1,0 +1,51 @@
+.background {
+  /*生成绝对定位的元素，相对于浏览器窗口进行定位。*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  /*堆叠顺序  拥有更高堆叠顺序的元素
+  总是会处于堆叠顺序较低的元素的前面
+  auto 默认。堆叠顺序与父元素相等*/
+  z-index: -1;
+  opacity: 0.1;
+}
+.meta {
+  display: flex;
+  flex-direction: column;
+  /*使内容位于容器的中心  */
+  align-items: center;
+  padding: 50rpx 40rpx;
+}
+.poster {
+  width: 100%;
+  height: 800rpx;
+  margin: 20rpx;
+}
+.title {
+  font-style: 42rpx;
+  color: #444;
+}
+.info {
+  font-size: 24rpx;
+  color: #888;
+  margin-top: 20rpx;
+  width: 80%;
+}
+.summary {
+  width: 80%;
+  margin: 30rpx auto;
+}
+.label {
+  display: block;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.content {
+  color: #666;
+  font-size: 22rpx;
+  
+}

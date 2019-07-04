@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <!--indicator-dots="true" 显示面板指示点  -->
+  <swiper class="splash" indicator-dots="true">
+    <!--wx:for 绑定一个数组，重复渲染该组件  -->
+    <!--wx:key 循环遍历每一项(相当于 wx:for-item) -->
+    <swiper-item wx:for="{{movies}}" wx:key="item" >
+      <!--scaleToFill 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满image元素  -->
+      <!--aspectFill  -->
+      <image src="{{item.large}}" class="slide-image" mode="aspectFill"></image>
+      <!--wx:if 条件渲染，条件为真时，渲染该组件，在遍历到最后一张图片的时候显示按钮  -->
+      <button class="start" bindtap="handleStart" wx:if="{{index == movies.length - 1}}">
+        立即体验
+      </button>
+    </swiper-item>
+  </swiper>
+</view>

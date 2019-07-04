@@ -1,0 +1,35 @@
+<view class="{{skinStyle}}-box">
+  <view id="header">
+    <!-- 开关选择器 -->
+    <!--color选中时候的颜色  -->
+    <switch bindchange="switchChange" color="red" class="switch" />
+    <view class="content">
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class="nickname">{{userInfo.nickName}}</view>
+      <view class="orther">{{userInfo.province}}</view>
+    </view>
+  </view>
+  <view id="section">
+    <view class="flex-wrap">
+      <view class="flex-item" wx:for="{{x_menus}}">
+        <view>
+          <image src="{{item.icon}}" class="icon"></image>
+        </view>
+        <view class="menus_title">
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view id="menus">
+    <view class="content" wx:for="{{y_menus}}">
+      <view class="view">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="right">
+        <image src="../../images/rightjian.png" style="width:14px;height:14px"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

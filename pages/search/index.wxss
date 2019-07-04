@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  /*使内容位于容器的中心。  */
+  justify-content: center;
+  border-bottom: 1rpx solid #ccc;
+  margin-bottom:40rpx;
+  height:80rpx;
+  background-color: green;
+}
+.search{
+  width: 250px;
+  height: 30px;
+  text-align: center;
+  border: 2px solid #324b4e;
+  border-radius: 42px;
+  margin-top: 5rpx;
+  background: white;
+}
+.search-placeholder {
+  color: #ccc;
+  font-size: 38rpx;
+  text-align: center;
+}
+
+/* 模板文件的样式  */
+/*左侧图片部分的样式  */
+.list {
+  height: 100%;
+  /*将模板部分进行定位*/
+  position:absolute;
+  top:80rpx;
+}
+.item {
+  display: flex;
+  padding: 40rpx 40rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.poster {
+  width: 128rpx;
+  height: 168rpx;
+  margin-right: 20rpx;
+}
+.meta {
+  flex: 1;
+}
+/*至此运行一下，看下效果，基本的样子出来了 */
+/*中间部分的样式  */
+.title, .sub-title {
+  display: block;
+  margin-bottom: 15rpx;
+}
+.title {
+  font-size: 32rpx;
+}
+.sub-title {
+  font-size: 22rpx;
+  color: #c0c0c0;
+}
+.artists {
+  font-size: 24rpx;
+  color: #999;
+}
+/*至此运行一下，中间部分的样式修饰完成  */
+
+/*右侧评分  */
+.rating text {
+  display: inline-block;
+  width: 40rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(247, 76, 49, 0.8);
+  color: #fff;
+  padding: 10rpx;
+  border-radius: 20rpx;
+}
+
+/*以下部分设置 没有更多内容了 字的样式  */
+ .tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+
+

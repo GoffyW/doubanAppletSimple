@@ -1,0 +1,65 @@
+.slide swiper {
+  /* rpx单位是微信小程序中css的尺寸单位，
+  rpx可以根据屏幕宽度进行自适应。 */
+  height: 380rpx;
+}
+/*轮播图图片的样式设置  */
+.slide swiper image {
+  height: 380rpx;
+  width: 750rpx;
+}
+
+/*电影信息部分的样式  */
+.board {
+  /*此元素的内边距和边框不再会增加它的宽度。  */
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+.board-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 20rpx;
+  margin: 40rpx 0;
+  padding: 20rpx;
+  background-color: #fff;
+}
+.title {
+  display: flex;
+  margin-bottom: 10rpx;
+  width: 100%;
+}
+.title text {
+  flex: 1;
+}
+.title image {
+  height: 20rpx;
+  width: 20rpx;
+}
+.content {
+  height: 300rpx;
+}
+.inner {
+  display: flex;
+  flex-direction: row;
+  height: 300rpx;
+  width: 900rpx;
+}
+.movie-item {
+  display: flex;
+  /*纵向排列  */
+  flex-direction: column;
+  width: 180rpx;
+  margin: 10rpx;
+}
+.movie-item image {
+  width: 180rpx;
+  height: 250rpx;
+}
+.movie-item text {
+  text-align: center;
+  overflow: hidden;
+  /*文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止*/
+  white-space: nowrap;
+  /*显示省略符号来代表被修剪的文本。  */
+  text-overflow: ellipsis;
+}

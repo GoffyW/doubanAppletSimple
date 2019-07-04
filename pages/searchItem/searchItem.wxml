@@ -1,0 +1,22 @@
+<view class="container" >
+  <loading hidden="{{hidden}}">加载中...</loading>
+  <!--根据json数据对应的修改  -->
+  <image class="background" src="{{ movieDetail.images.large }}" mode="aspectFill"/>
+  <scroll-view class="container" scroll-y="true" wx:if="{{ movieDetail.title }}">
+    <view class="meta">
+      <image class="poster" src="{{ movieDetail.images.large }}" mode="aspectFit"/>
+      <text class="title">{{ movieDetail.title }}({{ movieDetail.year }})</text>
+      <text class="info">评分：{{ movieDetail.rating.average }}</text>
+      <text class="info">导演：
+        <block wx:for="{{ movieDetail.directors }}"> {{ item.name }} </block>
+      </text>
+      <text class="info">主演：
+        <block wx:for="{{ movieDetail.casts }}"> {{ item.name }} </block>
+      </text>
+    </view>
+    <view class="summary">
+      <text class="label">摘要：</text>
+      <text class="content">{{ movieDetail.summary }}</text>
+    </view>
+  </scroll-view>
+</view>
